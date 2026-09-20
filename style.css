@@ -232,6 +232,7 @@ nav.scrolled {
 .nav-links a.active { color: var(--blue); }
 
 .nav-cta { font-size: 0.85rem; padding: 8px 20px; }
+.nav-cv { font-size: 0.85rem; padding: 8px 18px; gap: 6px; }
 
 /* Hamburger */
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
