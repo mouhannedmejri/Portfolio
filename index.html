@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mouhanned Mejri – CS Engineer & AI Developer</title>
+  <meta name="description"
+    content="Portfolio of Mouhanned Mejri – Computer Science Engineering student at ENSIT, specializing in Generative AI, full-stack development, and intelligent systems." />
+  <meta name="keywords"
+    content="Mouhanned Mejri, AI Developer, Full Stack, Generative AI, React, FastAPI, Portfolio, ENSIT" />
+  <meta name="author" content="Mouhanned Mejri" />
+  <meta property="og:title" content="Mouhanned Mejri – CS Engineer & AI Developer" />
+  <meta property="og:description"
+    content="Building AI-powered applications, LLM/RAG pipelines, and full-stack platforms." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Particles Canvas -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- ════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home">MM</a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div style="display:flex;align-items:center;gap:14px;">
+        <a href="mailto:Mouhannedmejri10@gmail.com" class="btn btn-primary nav-cta">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="container">
+      <div class="hero-content">
+        <!-- Left -->
+        <div class="hero-left">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Available for Opportunities
+          </div>
+
+          <h1 class="hero-name">
+            <span class="gradient-text">Mouhanned</span><br>Mejri
+          </h1>
+
+          <p class="hero-title">
+            <span id="typing-text">Software Engineer</span><span class="typing-cursor" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero-desc">
+            CS Engineering student at ENSIT building AI-powered systems, LLM/RAG pipelines,
+            multi-agent architectures, and full-stack platforms. Passionate about Generative AI
+            and accessible human-computer interaction.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="hero-view-work">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              View My Work
+            </a>
+            <a href="mailto:Mouhannedmejri10@gmail.com" class="btn btn-outline" id="hero-contact">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              Get In Touch
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-socials" role="list" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/mouhanned-mejri" class="social-icon" id="social-linkedin"
+              target="_blank" rel="noopener" aria-label="LinkedIn" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://github.com/mouhannedmejri" class="social-icon" id="social-github" target="_blank"
+              rel="noopener" aria-label="GitHub" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+            <a href="https://codeforces.com" class="social-icon" id="social-codeforces" target="_blank" rel="noopener"
+              aria-label="Codeforces" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <path
+                  d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5h-3C.672 21 0 20.328 0 19.5V9c0-.828.672-1.5 1.5-1.5h3zm9-4.5c.828 0 1.5.672 1.5 1.5V19.5c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5V4.5C9 3.672 9.672 3 10.5 3h3zm9 7.5c.828 0 1.5.672 1.5 1.5v9c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5v-9c0-.828.672-1.5 1.5-1.5h3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="hero-right">
+          <!-- Profile Photo -->
+          <div class="hero-photo-wrap">
+            <div class="hero-photo-ring"></div>
+            <img src="photo.png" alt="Mouhanned Mejri – profile photo" class="hero-photo" id="profile-photo" />
+            <div class="hero-photo-glow"></div>
+          </div>
+
+          <!-- Stats -->
+          <div class="hero-stats" aria-label="Key stats">
+            <div class="glass-card stat-card reveal delay-1">
+              <div class="stat-number"><span class="counter" data-target="5" data-suffix="+">5+</span></div>
+              <div class="stat-label">Projects Built</div>
+            </div>
+            <div class="glass-card stat-card reveal delay-2">
+              <div class="stat-number"><span class="counter" data-target="3" data-suffix="">3</span></div>
+              <div class="stat-label">Internships</div>
+            </div>
+            <div class="glass-card stat-card reveal delay-3">
+              <div class="stat-number"><span class="counter" data-target="1500" data-suffix="">1500</span></div>
+              <div class="stat-label">CF Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="hero-scroll" id="hero-scroll" aria-label="Scroll down" role="button" tabindex="0">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════ -->
+  <section id="about" aria-label="About me">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">About Me</p>
+          <h2 class="section-title reveal">Building the <span>future</span> with<br>code &amp; intelligence</h2>
+          <p class="section-sub reveal">
+            I'm a Computer Science Engineering student at <strong style="color:var(--blue);">ENSIT, Tunis</strong>,
+            passionate about crafting intelligent systems that solve real problems. From LLM-powered
+            accessibility tools to gamified competitive programming platforms, I love turning complex
+            ideas into elegant software.
+          </p>
+
+          <div class="about-highlights">
+            <div class="glass-card highlight-item reveal delay-1">
+              <div class="highlight-icon">🤖</div>
+              <div class="highlight-title">Generative AI</div>
+              <div class="highlight-text">LLMs, RAG pipelines, multi-agent systems, and multimodal AI</div>
+            </div>
+            <div class="glass-card highlight-item reveal delay-2">
+              <div class="highlight-icon">⚡</div>
+              <div class="highlight-title">Full-Stack Dev</div>
+              <div class="highlight-text">React, Next.js, FastAPI, mobile apps with React Native</div>
+            </div>
+            <div class="glass-card highlight-item reveal delay-3">
+              <div class="highlight-icon">🏆</div>
+              <div class="highlight-title">Competitive Prog</div>
+              <div class="highlight-text">Codeforces Specialist ~1500, algorithms & data structures</div>
+            </div>
+            <div class="glass-card highlight-item reveal delay-4">
+              <div class="highlight-icon">🌐</div>
+              <div class="highlight-title">Multi-lingual</div>
+              <div class="highlight-text">Arabic (native), French, English (fluent), German (basic)</div>
+            </div>
+          </div>
+
+          <div style="margin-top:28px;" class="reveal delay-5">
+            <span class="cf-badge">🏅 Codeforces Specialist &nbsp;≈ 1500</span>
+          </div>
+        </div>
+
+        <div class="about-visual reveal-right">
+          <div class="hero-photo-wrap">
+            <div class="hero-photo-ring"></div>
+            <img src="photo.png" alt="Mouhanned Mejri – profile photo" class="hero-photo" id="profile-photo" />
+            <div class="hero-photo-glow"></div>
+          </div>
+          <div class="floating-badge one glass-card">
+            <span class="b-icon">🚀</span> AI Systems Builder
+          </div>
+          <div class="floating-badge two glass-card">
+            <span class="b-icon">📍</span> Tunis, Tunisia
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SKILLS
+  ════════════════════════════════════════ -->
+  <section id="skills" aria-label="Technical Skills">
+    <div class="container">
+      <p class="section-label">Technical Arsenal</p>
+      <h2 class="section-title reveal">Skills &amp; <span>Technologies</span></h2>
+      <p class="section-sub reveal">A breadth of tools and frameworks I've applied across real-world projects.</p>
+
+      <div class="skills-grid">
+
+        <div class="glass-card skill-category reveal delay-1">
+          <div class="skill-category-header">
+            <div class="skill-category-icon blue">💻</div>
+            <div class="skill-category-name">Programming Languages</div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category reveal delay-2">
+          <div class="skill-category-header">
+            <div class="skill-category-icon purple">🤖</div>
+            <div class="skill-category-name">Generative AI &amp; AI</div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">LLMs</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">Multimodal AI</span>
+            <span class="skill-tag">AI Agents</span>
+            <span class="skill-tag">Agentic Workflows</span>
+            <span class="skill-tag">NLP</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category reveal delay-3">
+          <div class="skill-category-header">
+            <div class="skill-category-icon teal">⚙️</div>
+            <div class="skill-category-name">Frameworks &amp; Libraries</div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">React Native</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Ionic</span>
+            <span class="skill-tag">Expo</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category reveal delay-1">
+          <div class="skill-category-header">
+            <div class="skill-category-icon pink">🌐</div>
+            <div class="skill-category-name">Web &amp; Backend</div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">WebView</span>
+            <span class="skill-tag">Chrome Extensions</span>
+            <span class="skill-tag">DOM Manipulation</span>
+            <span class="skill-tag">Browser Automation</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category reveal delay-2">
+          <div class="skill-category-header">
+            <div class="skill-category-icon orange">🗃️</div>
+            <div class="skill-category-name">Database &amp; Auth</div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Prisma</span>
+            <span class="skill-tag">Supabase</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category reveal delay-3">
+          <div class="skill-category-header">
+            <div class="skill-category-icon red">🔧</div>
+            <div class="skill-category-name">Tools &amp; Platforms</div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Uvicorn</span>
+            <span class="skill-tag">Plasmo</span>
+            <span class="skill-tag">Mistral</span>
+            <span class="skill-tag">Gemini</span>
+            <span class="skill-tag">Groq</span>
+            <span class="skill-tag">Firecrawl</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       EXPERIENCE
+  ════════════════════════════════════════ -->
+  <section id="experience" aria-label="Professional Experience">
+    <div class="container">
+      <p class="section-label">Work History</p>
+      <h2 class="section-title reveal">Professional <span>Experience</span></h2>
+      <p class="section-sub reveal">Real-world roles where I've shipped AI systems and full-stack solutions.</p>
+
+      <div class="timeline">
+
+        <!-- Talan Summer Camp 2026 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Software Development Intern</div>
+              <div class="exp-period">Summer 2026</div>
+            </div>
+            <div class="exp-company">
+              Talan Summer Camp
+              <span class="location-tag">· Tunisia</span>
+            </div>
+            <ul class="exp-list">
+              <li>Developed <strong>Navi</strong>, an AI-powered accessibility ecosystem that automatically detects user
+                interaction difficulties, adapts interfaces, and executes web navigation tasks through conversational
+                AI.</li>
+              <li>Built a <strong>multi-agent architecture</strong> with specialized agents for user profiling,
+                conversational intent routing, DOM analysis, and autonomous browser planning and execution.</li>
+              <li>Developed cross-platform clients using <strong>React Native, Expo, and Plasmo</strong>, combining a
+                mobile application with a Chrome MV3 browser extension.</li>
+              <li>Implemented backend services with <strong>FastAPI and Python</strong>, integrating LLM-powered
+                reasoning, multimodal image understanding, speech interaction, page analysis, and browser automation.
+              </li>
+              <li>Integrated <strong>Mistral/Pixtral, Groq, Gemini, Voxtral, and Firecrawl</strong> for multimodal
+                understanding, planning, speech interaction, and web content processing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Krenova 2025 -->
+        <div class="timeline-item reveal delay-1">
+          <div class="timeline-dot purple"></div>
+          <div class="glass-card exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Software Development Intern</div>
+              <div class="exp-period">2025</div>
+            </div>
+            <div class="exp-company">
+              Krenova Consulting
+              <span class="location-tag">· Tunisia</span>
+            </div>
+            <ul class="exp-list">
+              <li>Designed and developed an end-to-end e-commerce platform specialized in automotive spare parts.</li>
+              <li>Integrated an <strong>AI-powered recommendation assistant</strong> to suggest suitable components
+                based on vehicle specifications.</li>
+              <li>Contributed to frontend development using <strong>React, TypeScript, Tailwind CSS</strong>, and modern
+                component-based architecture.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- IEEE Webmaster -->
+        <div class="timeline-item reveal delay-2">
+          <div class="timeline-dot teal"></div>
+          <div class="glass-card exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Webmaster</div>
+              <div class="exp-period">2024 – 2025</div>
+            </div>
+            <div class="exp-company">
+              IEEE ENSIT Student Branch
+              <span class="location-tag">· Tunisia</span>
+            </div>
+            <ul class="exp-list">
+              <li>Maintained and developed features for the official IEEE ENSIT Student Branch website.</li>
+              <li>Led and coordinated the branch development team while managing feature implementation and technical
+                tasks.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- IEEE Project Manager -->
+        <div class="timeline-item reveal delay-3">
+          <div class="timeline-dot pink"></div>
+          <div class="glass-card exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Project Manager</div>
+              <div class="exp-period">2024 – 2025</div>
+            </div>
+            <div class="exp-company">
+              IEEE ENSIT Computer Society Chapter
+              <span class="location-tag">· Tunisia</span>
+            </div>
+            <ul class="exp-list">
+              <li>Managed project lifecycles including requirements analysis, task allocation, milestone tracking, and
+                quality assurance.</li>
+              <li>Facilitated communication and coordination across development teams to ensure timely project delivery.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- TomorrowLand -->
+        <div class="timeline-item reveal delay-4">
+          <div class="timeline-dot"></div>
+          <div class="glass-card exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Programme Manager</div>
+              <div class="exp-period">2025</div>
+            </div>
+            <div class="exp-company">
+              TomorrowLand 2.0 IT Event
+              <span class="location-tag">· Tunisia</span>
+            </div>
+            <ul class="exp-list">
+              <li>Structured workshops, competitions, and activities into a coherent technical event programme while
+                coordinating participant flow and scheduling.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PROJECTS
+  ════════════════════════════════════════ -->
+  <section id="projects" aria-label="Selected Projects">
+    <div class="container">
+      <p class="section-label">What I've Built</p>
+      <h2 class="section-title reveal">Selected <span>Projects</span></h2>
+      <p class="section-sub reveal">A showcase of AI systems, platforms, and applications I've engineered.</p>
+
+      <div class="projects-filter reveal" role="group" aria-label="Project filter">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+        <button class="filter-btn" data-filter="ai" id="filter-ai">AI / LLM</button>
+        <button class="filter-btn" data-filter="web" id="filter-web">Web Platform</button>
+        <button class="filter-btn" data-filter="mobile" id="filter-mobile">Mobile</button>
+        <button class="filter-btn" data-filter="security" id="filter-security">Security</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Navi -->
+        <div class="glass-card project-card reveal" data-category="ai mobile" id="project-navi">
+          <div class="project-featured">Featured</div>
+          <div>
+            <div class="project-number">01</div>
+            <div class="project-title">Navi – AI Accessibility Assistant</div>
+            <div class="project-year">2026</div>
+          </div>
+          <p class="project-desc">
+            An intelligent accessibility ecosystem designed to adapt digital interfaces through automatic detection,
+            dynamic UI adaptation, and agentic task automation. Monitors passive interaction gestures — pinch-zoom,
+            tap misses, scroll hesitation — to identify user struggles and respond with smart UI changes or
+            conversational AI.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag blue">React Native</span>
+            <span class="tech-tag purple">FastAPI</span>
+            <span class="tech-tag teal">Mistral/Pixtral</span>
+            <span class="tech-tag blue">Gemini</span>
+            <span class="tech-tag purple">Groq</span>
+            <span class="tech-tag neutral">Plasmo</span>
+            <span class="tech-tag neutral">Expo</span>
+            <span class="tech-tag teal">Supabase</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-btn project-btn-github" aria-label="Navi GitHub repository" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              GitHub
+            </a>
+            <a href="#" class="project-btn project-btn-live" aria-label="Navi live demo" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="15" height="15">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              See More
+            </a>
+          </div>
+        </div>
+
+        <!-- BugHunting -->
+        <div class="glass-card project-card reveal delay-1" data-category="security ai web" id="project-bughunting">
+          <div>
+            <div class="project-number">02</div>
+            <div class="project-title">BugHunting – AI Bug Bounty Platform</div>
+            <div class="project-year">2026</div>
+          </div>
+          <p class="project-desc">
+            A security platform connecting vulnerability researchers with clients. Features a RAG/LLM-based
+            classification pipeline to automatically filter spam and low-quality reports, plus role-based workflows
+            and a severity-tiered bounty system.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag blue">Next.js</span>
+            <span class="tech-tag neutral">TypeScript</span>
+            <span class="tech-tag purple">RAG / LLMs</span>
+            <span class="tech-tag teal">PostgreSQL</span>
+            <span class="tech-tag neutral">Prisma</span>
+            <span class="tech-tag neutral">Python</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-btn project-btn-github" aria-label="BugHunting GitHub repository" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              GitHub
+            </a>
+            <a href="#" class="project-btn project-btn-live" aria-label="BugHunting live demo" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="15" height="15">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              See More
+            </a>
+          </div>
+        </div>
+
+        <!-- Apex Arena -->
+        <div class="glass-card project-card reveal delay-2" data-category="web" id="project-apex">
+          <div>
+            <div class="project-number">03</div>
+            <div class="project-title">Apex Arena – Competitive Programming Platform</div>
+            <div class="project-year">2026</div>
+          </div>
+          <p class="project-desc">
+            A gamified competitive programming platform with team-based contests and structured tournament brackets.
+            Implements dual-division system (Champions + Lower), head-to-head matches, rankings, and
+            promotion/relegation mechanics.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag blue">React</span>
+            <span class="tech-tag neutral">TypeScript</span>
+            <span class="tech-tag teal">PostgreSQL</span>
+            <span class="tech-tag neutral">Node.js</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-btn project-btn-github" aria-label="Apex Arena GitHub repository" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              GitHub
+            </a>
+            <a href="#" class="project-btn project-btn-live" aria-label="Apex Arena live demo" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="15" height="15">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              See More
+            </a>
+          </div>
+        </div>
+
+        <!-- Enchère Express -->
+        <div class="glass-card project-card reveal delay-3" data-category="web" id="project-enchere">
+          <div>
+            <div class="project-number">04</div>
+            <div class="project-title">Enchère Express – Online Auction Platform</div>
+            <div class="project-year">2025</div>
+          </div>
+          <p class="project-desc">
+            A real-time auction platform supporting multiple asset categories including fine art, real estate, and
+            vehicles.
+            Features authenticated bidding, configurable auction windows, automated closing, and winner notifications.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag blue">React</span>
+            <span class="tech-tag neutral">Spring Boot</span>
+            <span class="tech-tag teal">PostgreSQL</span>
+            <span class="tech-tag neutral">WebSockets</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-btn project-btn-github" aria-label="Enchère Express GitHub repository"
+              target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              GitHub
+            </a>
+            <a href="#" class="project-btn project-btn-live" aria-label="Enchère Express live demo" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="15" height="15">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              See More
+            </a>
+          </div>
+        </div>
+
+        <!-- FreelanceHub -->
+        <div class="glass-card project-card reveal delay-4" data-category="mobile web" id="project-freelancehub">
+          <div>
+            <div class="project-number">05</div>
+            <div class="project-title">FreelanceHub – Freelance Marketplace App</div>
+            <div class="project-year">2025</div>
+          </div>
+          <p class="project-desc">
+            A cross-platform mobile marketplace connecting clients with freelance professionals.
+            Includes project posting, freelancer proposals, bidding workflows, and real-time in-app messaging.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag blue">React Native</span>
+            <span class="tech-tag neutral">Expo</span>
+            <span class="tech-tag purple">FastAPI</span>
+            <span class="tech-tag teal">Supabase</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-btn project-btn-github" aria-label="FreelanceHub GitHub repository"
+              target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              GitHub
+            </a>
+            <a href="#" class="project-btn project-btn-live" aria-label="FreelanceHub live demo" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="15" height="15">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              See More
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       EDUCATION & LANGUAGES
+  ════════════════════════════════════════ -->
+  <section id="education" aria-label="Education and Languages">
+    <div class="container">
+      <p class="section-label">Background</p>
+      <h2 class="section-title reveal">Education &amp; <span>Languages</span></h2>
+      <p class="section-sub reveal">Academic foundation paired with multilingual communication.</p>
+
+      <div class="edu-lang-grid">
+        <!-- Education -->
+        <div class="glass-card edu-card reveal">
+          <p
+            style="font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:20px;">
+            🎓 Academic</p>
+          <div class="edu-degree">Computer Science Engineering Degree</div>
+          <div class="edu-institution">Higher National Engineering School of Tunis (ENSIT)</div>
+          <p style="color:var(--text-secondary);font-size:0.88rem;margin-top:10px;line-height:1.7;">
+            Pursuing a rigorous CS engineering curriculum covering algorithms, software engineering,
+            data structures, databases, systems, and applied AI. Actively engaged in IEEE student
+            branches and national competitions.
+          </p>
+          <div class="edu-meta">
+            <span>📅 2024 – Present</span>
+            <span>📍 Tunis, Tunisia</span>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div>
+          <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:20px;"
+            class="reveal">🌍 Languages</p>
+          <div class="languages-grid">
+            <div class="glass-card lang-card reveal delay-1">
+              <div class="lang-name">Arabic</div>
+              <span class="lang-level native">Native</span>
+            </div>
+            <div class="glass-card lang-card reveal delay-2">
+              <div class="lang-name">French</div>
+              <span class="lang-level fluent">Fluent</span>
+            </div>
+            <div class="glass-card lang-card reveal delay-3">
+              <div class="lang-name">English</div>
+              <span class="lang-level fluent">Fluent</span>
+            </div>
+            <div class="glass-card lang-card reveal delay-4">
+              <div class="lang-name">German</div>
+              <span class="lang-level basic">Basic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════ -->
+  <section id="contact" aria-label="Contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="glass-card contact-glow reveal">
+          <p class="section-label" style="justify-content:center;">Get In Touch</p>
+          <h2 class="contact-title">Let's <span class="gradient-text">Build</span><br>Something Great</h2>
+          <p class="contact-sub">
+            Whether you have a project in mind, an internship opportunity, or just want to talk AI and code —
+            my inbox is always open.
+          </p>
+          <div>
+            <a href="mailto:Mouhannedmejri10@gmail.com" class="contact-email" id="contact-email-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              Mouhannedmejri10@gmail.com
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div class="contact-actions">
+            <a href="mailto:Mouhannedmejri10@gmail.com" class="btn btn-primary" id="contact-btn-email">Send Email</a>
+            <a href="https://www.linkedin.com/in/mouhanned-mejri" target="_blank" rel="noopener" class="btn btn-outline"
+              id="contact-btn-linkedin">LinkedIn</a>
+            <a href="https://github.com/mouhannedmejri" target="_blank" rel="noopener" class="btn btn-outline"
+              id="contact-btn-github">GitHub</a>
+          </div>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/mouhanned-mejri" class="social-icon" target="_blank" rel="noopener"
+              aria-label="LinkedIn" id="footer-social-linkedin">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://github.com/mouhannedmejri" class="social-icon" target="_blank" rel="noopener"
+              aria-label="GitHub" id="footer-social-github">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <a href="#hero" class="footer-logo">Mouhanned Mejri</a>
+      <p class="footer-copy">© 2026 Mouhanned Mejri · CS Engineer &amp; AI Developer · Tunis, Tunisia</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
