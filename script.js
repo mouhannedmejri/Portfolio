@@ -87,11 +87,12 @@ function initTyping() {
   const el = document.getElementById('typing-text');
   if (!el) return;
   const phrases = [
-    'Software Engineer',
-    'AI & LLM Developer',
-    'Full-Stack Builder',
-    'Competitive Programmer',
-    'Generative AI Enthusiast',
+    'Final-Year Computer Engineering Student',
+    'LLM Agents & Multi-Agent Systems',
+    'RAG & Multimodal AI Engineer',
+    'Full-Stack AI Products Builder',
+    'Applied AI & Few-Shot ML Researcher',
+    'Codeforces Specialist (Rating 1490)',
   ];
   let pi = 0, ci = 0, deleting = false;
 
@@ -111,7 +112,7 @@ function initTyping() {
         pi = (pi + 1) % phrases.length;
       }
     }
-    setTimeout(type, deleting ? 50 : 90);
+    setTimeout(type, deleting ? 45 : 80);
   }
   type();
 }
@@ -184,7 +185,8 @@ function initProjectFilter() {
       btn.classList.add('active');
       const cat = btn.dataset.filter;
       cards.forEach(card => {
-        const match = cat === 'all' || card.dataset.category?.includes(cat);
+        const categories = (card.dataset.category || '').split(/\s+/);
+        const match = cat === 'all' || categories.includes(cat);
         card.style.display = match ? 'flex' : 'none';
         if (match) card.style.animation = 'fadeUp 0.4s ease both';
       });
@@ -210,18 +212,21 @@ function initCounters() {
       if (e.isIntersecting) {
         const el = e.target;
         const target = +el.dataset.target;
-        const duration = 1500;
-        const step = target / (duration / 16);
+        const prefix = el.dataset.prefix || '';
+        const suffix = el.dataset.suffix || '';
+        if (isNaN(target)) return;
+        const duration = 1400;
+        const step = Math.max(1, target / (duration / 16));
         let current = 0;
         const timer = setInterval(() => {
           current = Math.min(current + step, target);
-          el.textContent = Math.floor(current) + (el.dataset.suffix || '');
+          el.textContent = prefix + Math.floor(current) + suffix;
           if (current >= target) clearInterval(timer);
         }, 16);
         observer.unobserve(el);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.4 });
   counters.forEach(c => observer.observe(c));
 }
 
